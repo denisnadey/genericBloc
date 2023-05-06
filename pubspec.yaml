@@ -1,9 +1,5 @@
 name: generic_bloc
-description:
-  - "The generic bloc provides basic functions to your data such as loaded
-    state, loaded (but not fully loaded) state, and fully loaded. You can use it
-    to add such states for any type of data. The package includes GenericBloc
-    for lists and GenericOneBloc for single values."
+description: The generic bloc provides basic functions to your data such as loaded state, loaded (but not fully loaded) state, and fully loaded. You can use it to add such states for any type of data. The package includes GenericBloc for lists and GenericOneBloc for single values.
 version: 0.0.1
 repository: https://github.com/denisnadey/genericBloc
 issue_tracker: https://github.com/denisnadey/genericBloc/issues
