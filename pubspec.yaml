@@ -5,9 +5,9 @@ description:
     to add such states for any type of data. The package includes GenericBloc
     for lists and GenericOneBloc for single values."
 version: 0.0.1
-repository: https://github.com/denisdandy/genericBloc
-issue_tracker: https://github.com/denisdandy/genericBloc/issues
-homepage: https://github.com/denisdandy/genericBloc
+repository: https://github.com/denisnadey/genericBloc
+issue_tracker: https://github.com/denisnadey/genericBloc/issues
+homepage: https://github.com/denisnadey/genericBloc
 
 environment:
   sdk: ">=2.19.6 <3.0.0"
