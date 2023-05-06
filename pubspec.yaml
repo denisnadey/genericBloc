@@ -1,0 +1,29 @@
+name: generic_bloc
+description:
+  - "The generic bloc provides basic functions to your data such as loaded
+    state, loaded (but not fully loaded) state, and fully loaded. You can use it
+    to add such states for any type of data. The package includes GenericBloc
+    for lists and GenericOneBloc for single values."
+version: 0.0.1
+repository: https://github.com/denisdandy/genericBloc
+issue_tracker: https://github.com/denisdandy/genericBloc/issues
+homepage: https://github.com/denisdandy/genericBloc
+
+environment:
+  sdk: ">=2.19.6 <3.0.0"
+  flutter: ">=1.17.0"
+
+dependencies:
+  bloc: ^8.1.1
+  flutter:
+    sdk: flutter
+  flutter_bloc: ^8.1.2
+  freezed: ^2.3.3
+  freezed_annotation: ^2.2.0
+
+dev_dependencies:
+  flutter_lints: ^2.0.0
+  flutter_test:
+    sdk: flutter
+
+flutter: null
