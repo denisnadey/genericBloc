@@ -1,4 +1,3 @@
-
 ## Example usage GenericOneBLoc
 
 The generic bloc provides basic functions to your data such as loaded
@@ -7,11 +6,13 @@ to add such states for any type of data. The package includes GenericBloc
 for lists and GenericOneBloc for single values.
 
 ## In Bloc
+
 ```dart
 final GenericOneBloc<bool> activeBanner = GenericOneBloc<bool>();
 ```
 
 ## In UI
+
 ```dart
     return BlocBuilder<GenericOneBloc<bool>, GenericOneState<bool>>(
       bloc: context.read<SomeBloc>().dayDelivery,
@@ -24,34 +25,55 @@ final GenericOneBloc<bool> activeBanner = GenericOneBloc<bool>();
       ),
     );
 ```
+
 ---
+
 ## Example usage GenericBLoc
 
 ## In Bloc
+
 ```dart
 final GenericBloc<Product> products = GenericBloc<Product>();
 ```
 
 ## In UI
+
 ```dart
 BlocBuilder<GenericBloc<Product>, GenericState<Product>>(
-bloc: context.read<SomeBloc>().products,
-builder: (context, state) => state.map(
-	loadingState: (loadingState) => Skeleton(),
-	loadedState: (loadedState) => Column(
-	children: [
-		...loadedState.data.map((e) => Widget(e)),
-		Skeleton(),
-	],
+	bloc: context.read<SomeBloc>().products,
+	builder: (context, state) => state.map(
+		loadingState: (loadingState) => Skeleton(),
+		loadedState: (loadedState) => Column(
+		children: [
+			...loadedState.data.map((e) => Widget(e)),
+			Skeleton(),
+		],
+		),
+		fullLoadedState: (fullLoadedState) => Column(
+		children: fullLoadedState.data.map(
+			(e) => Widget(e),
+		),
+		),
+		errorState: (errorState) => Text(errorState.exception),
 	),
-	fullLoadedState: (fullLoadedState) => Column(
-	children: fullLoadedState.data.map(
-		(e) => Widget(e),
-	),
-	),
-	errorState: (errorState) => Text(errorState.exception),
-),
 )
 ```
 
+## How to send events ? (generic/genericOne)
 
+### genericBloc
+
+```dart
+someGenericBloc.add(GenericEvent.showLoading());
+someGenericBloc.add(GenericEvent.showLoaded(data: someData));
+someGenericBloc.add(GenericEvent.showFullLoaded(data: someData));
+someGenericBloc.add(GenericEvent.showError(exception: 'error'));
+```
+
+### genericOneBloc
+
+```dart
+someGenericBloc.add(GenericOneEvent.showLoading());
+someGenericBloc.add(GenericOneEvent.showLoaded(data: someData));
+someGenericBloc.add(GenericOneEvent.showError(exception: 'error'));
+```
