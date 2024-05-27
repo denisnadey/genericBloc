@@ -9,11 +9,11 @@ class GenericBloc<T> extends Bloc<GenericEvent<T>, GenericState<T>> {
   GenericBloc() : super(const _LoadingState()) {
     on<GenericEvent<T>>(
       (event, emit) => event.map(
-        showLoading: (event) => _onShowLoading(event, emit),
-        showLoaded: (event) => _onShowLoaded(event, emit),
-        showFullLoaded: (event) => _onShowFullLoaded(event, emit),
-        showError: (event) => _onShowError(event, emit),
-        refresh: (event) => _onRefresh(event, emit),
+        showLoading: (event) => _onShowLoading(event, emit.call),
+        showLoaded: (event) => _onShowLoaded(event, emit.call),
+        showFullLoaded: (event) => _onShowFullLoaded(event, emit.call),
+        showError: (event) => _onShowError(event, emit.call),
+        refresh: (event) => _onRefresh(event, emit.call),
       ),
     );
   }

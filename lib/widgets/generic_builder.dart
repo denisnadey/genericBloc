@@ -5,7 +5,7 @@ import 'package:generic_bloc/generic_bloc.dart';
 
 class BlocGenericWidget<T> extends StatelessWidget {
   const BlocGenericWidget({
-    Key? key,
+    super.key,
     required this.loadedBuilder,
     required this.fullLoadedBuilder,
     required this.loadingBuilder,
@@ -13,7 +13,7 @@ class BlocGenericWidget<T> extends StatelessWidget {
     this.getNextPage,
     this.onRefresh,
     this.bloc,
-  }) : super(key: key);
+  });
 
   final void Function()? onRefresh;
   final void Function()? getNextPage;
@@ -46,17 +46,14 @@ class BlocGenericWidget<T> extends StatelessWidget {
     required Widget Function(
       BuildContext context,
       List<T> data,
-    )
-        fullLoadedBuilder,
+    ) fullLoadedBuilder,
     required Widget Function(
       BuildContext context,
-    )
-        loadingBuilder,
+    ) loadingBuilder,
     required Widget Function(
       BuildContext context,
       String exception,
-    )
-        errorBuilder,
+    ) errorBuilder,
     GenericBloc<T>? bloc,
   }) =>
       BlocGenericWidget<T>(
@@ -90,22 +87,18 @@ class BlocGenericWidget<T> extends StatelessWidget {
       BuildContext context,
       List<T> data,
       void Function()? getNextPage,
-    )
-        loadedBuilder,
+    ) loadedBuilder,
     required Widget Function(
       BuildContext context,
       List<T> data,
-    )
-        fullLoadedBuilder,
+    ) fullLoadedBuilder,
     required Widget Function(
       BuildContext context,
-    )
-        loadingBuilder,
+    ) loadingBuilder,
     required Widget Function(
       BuildContext context,
       String exception,
-    )
-        errorBuilder,
+    ) errorBuilder,
     GenericBloc<T>? bloc,
   }) =>
       BlocGenericWidget<T>(
@@ -146,24 +139,20 @@ class BlocGenericWidget<T> extends StatelessWidget {
       List<T> data,
       Future<void> Function()? onRefresh,
       ScrollController scrollController,
-    )
-        loadedBuilder,
+    ) loadedBuilder,
     required Widget Function(
       BuildContext context,
       List<T> data,
       Future<void> Function()? onRefresh,
-    )
-        fullLoadedBuilder,
+    ) fullLoadedBuilder,
     required Widget Function(
       BuildContext context,
-    )
-        loadingBuilder,
+    ) loadingBuilder,
     required Widget Function(
       BuildContext context,
       String exception,
       Future<void> Function()? onRefresh,
-    )
-        errorBuilder,
+    ) errorBuilder,
     GenericBloc<T>? bloc,
   }) =>
       BlocGenericWidget<T>(
@@ -191,22 +180,18 @@ class BlocGenericWidget<T> extends StatelessWidget {
       BuildContext context,
       List<T> data,
       ScrollController scrollController,
-    )
-        loadedBuilder,
+    ) loadedBuilder,
     required Widget Function(
       BuildContext context,
       List<T> data,
-    )
-        fullLoadedBuilder,
+    ) fullLoadedBuilder,
     required Widget Function(
       BuildContext context,
-    )
-        loadingBuilder,
+    ) loadingBuilder,
     required Widget Function(
       BuildContext context,
       String exception,
-    )
-        errorBuilder,
+    ) errorBuilder,
     GenericBloc<T>? bloc,
   }) =>
       BlocGenericWidget<T>(
@@ -282,10 +267,9 @@ class BlocGenericWidget<T> extends StatelessWidget {
 
 class _GenericListBlocScrollPaginatedWidget extends StatefulWidget {
   const _GenericListBlocScrollPaginatedWidget({
-    Key? key,
     required this.builder,
     required this.onScrollEnd,
-  }) : super(key: key);
+  });
 
   final Widget Function(
     BuildContext context,

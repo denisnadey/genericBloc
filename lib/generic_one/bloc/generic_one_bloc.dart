@@ -16,10 +16,10 @@ class GenericOneBloc<T> extends Bloc<GenericOneEvent<T>, GenericOneState<T>> {
         ) {
     on<GenericOneEvent<T>>(
       (event, emit) => event.map(
-        showLoading: (event) => _onShowLoading(event, emit),
-        showLoaded: (event) => _onShowLoaded(event, emit),
-        showError: (event) => _onShowError(event, emit),
-        refresh: (event) => _onRefresh(event, emit),
+        showLoading: (event) => _onShowLoading(event, emit.call),
+        showLoaded: (event) => _onShowLoaded(event, emit.call),
+        showError: (event) => _onShowError(event, emit.call),
+        refresh: (event) => _onRefresh(event, emit.call),
       ),
     );
   }

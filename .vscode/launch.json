@@ -1,0 +1,40 @@
+{
+	// Use IntelliSense to learn about possible attributes.
+	// Hover to view descriptions of existing attributes.
+	// For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"name": "city_fit",
+			"request": "launch",
+			"type": "dart",
+
+			// "args": ["--disable-web-security"]
+		},
+
+		{
+			"name": "Flutter Web (with disabled web security)",
+			// "program": "lib/main.dart",
+			"request": "launch",
+			"type": "dart",
+			"args": [
+			  "--web-browser-flag",
+			  "--disable-web-security"
+			]
+		  },
+		{
+			"name": "city_fit (profile mode)",
+			"request": "launch",
+			"type": "dart",
+			"flutterMode": "profile"
+		},
+		{
+			"name": "city_fit (release mode)",
+			"request": "launch",
+			"type": "dart",
+			"flutterMode": "release"
+		}
+	]
+}
+
+///flutter run -d chrome --web-browser-flag "--disable-web-security"

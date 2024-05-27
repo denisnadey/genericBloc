@@ -12,7 +12,7 @@ part of 'generic_bloc.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$GenericEvent<T> {
@@ -93,25 +93,28 @@ class _$GenericEventCopyWithImpl<T, $Res, $Val extends GenericEvent<T>>
 }
 
 /// @nodoc
-abstract class _$$ShowLoadingGenericEventCopyWith<T, $Res> {
-  factory _$$ShowLoadingGenericEventCopyWith(_$ShowLoadingGenericEvent<T> value,
-          $Res Function(_$ShowLoadingGenericEvent<T>) then) =
-      __$$ShowLoadingGenericEventCopyWithImpl<T, $Res>;
+abstract class _$$ShowLoadingGenericEventImplCopyWith<T, $Res> {
+  factory _$$ShowLoadingGenericEventImplCopyWith(
+          _$ShowLoadingGenericEventImpl<T> value,
+          $Res Function(_$ShowLoadingGenericEventImpl<T>) then) =
+      __$$ShowLoadingGenericEventImplCopyWithImpl<T, $Res>;
 }
 
 /// @nodoc
-class __$$ShowLoadingGenericEventCopyWithImpl<T, $Res>
-    extends _$GenericEventCopyWithImpl<T, $Res, _$ShowLoadingGenericEvent<T>>
-    implements _$$ShowLoadingGenericEventCopyWith<T, $Res> {
-  __$$ShowLoadingGenericEventCopyWithImpl(_$ShowLoadingGenericEvent<T> _value,
-      $Res Function(_$ShowLoadingGenericEvent<T>) _then)
+class __$$ShowLoadingGenericEventImplCopyWithImpl<T, $Res>
+    extends _$GenericEventCopyWithImpl<T, $Res,
+        _$ShowLoadingGenericEventImpl<T>>
+    implements _$$ShowLoadingGenericEventImplCopyWith<T, $Res> {
+  __$$ShowLoadingGenericEventImplCopyWithImpl(
+      _$ShowLoadingGenericEventImpl<T> _value,
+      $Res Function(_$ShowLoadingGenericEventImpl<T>) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$ShowLoadingGenericEvent<T> implements ShowLoadingGenericEvent<T> {
-  const _$ShowLoadingGenericEvent();
+class _$ShowLoadingGenericEventImpl<T> implements ShowLoadingGenericEvent<T> {
+  const _$ShowLoadingGenericEventImpl();
 
   @override
   String toString() {
@@ -119,10 +122,10 @@ class _$ShowLoadingGenericEvent<T> implements ShowLoadingGenericEvent<T> {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$ShowLoadingGenericEvent<T>);
+            other is _$ShowLoadingGenericEventImpl<T>);
   }
 
   @override
@@ -210,24 +213,24 @@ class _$ShowLoadingGenericEvent<T> implements ShowLoadingGenericEvent<T> {
 }
 
 abstract class ShowLoadingGenericEvent<T> implements GenericEvent<T> {
-  const factory ShowLoadingGenericEvent() = _$ShowLoadingGenericEvent<T>;
+  const factory ShowLoadingGenericEvent() = _$ShowLoadingGenericEventImpl<T>;
 }
 
 /// @nodoc
-abstract class _$$LoadedGenericEventCopyWith<T, $Res> {
-  factory _$$LoadedGenericEventCopyWith(_$LoadedGenericEvent<T> value,
-          $Res Function(_$LoadedGenericEvent<T>) then) =
-      __$$LoadedGenericEventCopyWithImpl<T, $Res>;
+abstract class _$$LoadedGenericEventImplCopyWith<T, $Res> {
+  factory _$$LoadedGenericEventImplCopyWith(_$LoadedGenericEventImpl<T> value,
+          $Res Function(_$LoadedGenericEventImpl<T>) then) =
+      __$$LoadedGenericEventImplCopyWithImpl<T, $Res>;
   @useResult
   $Res call({List<T> data});
 }
 
 /// @nodoc
-class __$$LoadedGenericEventCopyWithImpl<T, $Res>
-    extends _$GenericEventCopyWithImpl<T, $Res, _$LoadedGenericEvent<T>>
-    implements _$$LoadedGenericEventCopyWith<T, $Res> {
-  __$$LoadedGenericEventCopyWithImpl(_$LoadedGenericEvent<T> _value,
-      $Res Function(_$LoadedGenericEvent<T>) _then)
+class __$$LoadedGenericEventImplCopyWithImpl<T, $Res>
+    extends _$GenericEventCopyWithImpl<T, $Res, _$LoadedGenericEventImpl<T>>
+    implements _$$LoadedGenericEventImplCopyWith<T, $Res> {
+  __$$LoadedGenericEventImplCopyWithImpl(_$LoadedGenericEventImpl<T> _value,
+      $Res Function(_$LoadedGenericEventImpl<T>) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -235,7 +238,7 @@ class __$$LoadedGenericEventCopyWithImpl<T, $Res>
   $Res call({
     Object? data = null,
   }) {
-    return _then(_$LoadedGenericEvent<T>(
+    return _then(_$LoadedGenericEventImpl<T>(
       data: null == data
           ? _value._data
           : data // ignore: cast_nullable_to_non_nullable
@@ -246,8 +249,8 @@ class __$$LoadedGenericEventCopyWithImpl<T, $Res>
 
 /// @nodoc
 
-class _$LoadedGenericEvent<T> implements LoadedGenericEvent<T> {
-  const _$LoadedGenericEvent({required final List<T> data}) : _data = data;
+class _$LoadedGenericEventImpl<T> implements LoadedGenericEvent<T> {
+  const _$LoadedGenericEventImpl({required final List<T> data}) : _data = data;
 
   final List<T> _data;
   @override
@@ -263,10 +266,10 @@ class _$LoadedGenericEvent<T> implements LoadedGenericEvent<T> {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$LoadedGenericEvent<T> &&
+            other is _$LoadedGenericEventImpl<T> &&
             const DeepCollectionEquality().equals(other._data, _data));
   }
 
@@ -277,9 +280,9 @@ class _$LoadedGenericEvent<T> implements LoadedGenericEvent<T> {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$LoadedGenericEventCopyWith<T, _$LoadedGenericEvent<T>> get copyWith =>
-      __$$LoadedGenericEventCopyWithImpl<T, _$LoadedGenericEvent<T>>(
-          this, _$identity);
+  _$$LoadedGenericEventImplCopyWith<T, _$LoadedGenericEventImpl<T>>
+      get copyWith => __$$LoadedGenericEventImplCopyWithImpl<T,
+          _$LoadedGenericEventImpl<T>>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -364,29 +367,31 @@ class _$LoadedGenericEvent<T> implements LoadedGenericEvent<T> {
 
 abstract class LoadedGenericEvent<T> implements GenericEvent<T> {
   const factory LoadedGenericEvent({required final List<T> data}) =
-      _$LoadedGenericEvent<T>;
+      _$LoadedGenericEventImpl<T>;
 
   List<T> get data;
   @JsonKey(ignore: true)
-  _$$LoadedGenericEventCopyWith<T, _$LoadedGenericEvent<T>> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$LoadedGenericEventImplCopyWith<T, _$LoadedGenericEventImpl<T>>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$FullLoadedGenericEventCopyWith<T, $Res> {
-  factory _$$FullLoadedGenericEventCopyWith(_$FullLoadedGenericEvent<T> value,
-          $Res Function(_$FullLoadedGenericEvent<T>) then) =
-      __$$FullLoadedGenericEventCopyWithImpl<T, $Res>;
+abstract class _$$FullLoadedGenericEventImplCopyWith<T, $Res> {
+  factory _$$FullLoadedGenericEventImplCopyWith(
+          _$FullLoadedGenericEventImpl<T> value,
+          $Res Function(_$FullLoadedGenericEventImpl<T>) then) =
+      __$$FullLoadedGenericEventImplCopyWithImpl<T, $Res>;
   @useResult
   $Res call({List<T> data});
 }
 
 /// @nodoc
-class __$$FullLoadedGenericEventCopyWithImpl<T, $Res>
-    extends _$GenericEventCopyWithImpl<T, $Res, _$FullLoadedGenericEvent<T>>
-    implements _$$FullLoadedGenericEventCopyWith<T, $Res> {
-  __$$FullLoadedGenericEventCopyWithImpl(_$FullLoadedGenericEvent<T> _value,
-      $Res Function(_$FullLoadedGenericEvent<T>) _then)
+class __$$FullLoadedGenericEventImplCopyWithImpl<T, $Res>
+    extends _$GenericEventCopyWithImpl<T, $Res, _$FullLoadedGenericEventImpl<T>>
+    implements _$$FullLoadedGenericEventImplCopyWith<T, $Res> {
+  __$$FullLoadedGenericEventImplCopyWithImpl(
+      _$FullLoadedGenericEventImpl<T> _value,
+      $Res Function(_$FullLoadedGenericEventImpl<T>) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -394,7 +399,7 @@ class __$$FullLoadedGenericEventCopyWithImpl<T, $Res>
   $Res call({
     Object? data = null,
   }) {
-    return _then(_$FullLoadedGenericEvent<T>(
+    return _then(_$FullLoadedGenericEventImpl<T>(
       data: null == data
           ? _value._data
           : data // ignore: cast_nullable_to_non_nullable
@@ -405,8 +410,9 @@ class __$$FullLoadedGenericEventCopyWithImpl<T, $Res>
 
 /// @nodoc
 
-class _$FullLoadedGenericEvent<T> implements FullLoadedGenericEvent<T> {
-  const _$FullLoadedGenericEvent({required final List<T> data}) : _data = data;
+class _$FullLoadedGenericEventImpl<T> implements FullLoadedGenericEvent<T> {
+  const _$FullLoadedGenericEventImpl({required final List<T> data})
+      : _data = data;
 
   final List<T> _data;
   @override
@@ -422,10 +428,10 @@ class _$FullLoadedGenericEvent<T> implements FullLoadedGenericEvent<T> {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$FullLoadedGenericEvent<T> &&
+            other is _$FullLoadedGenericEventImpl<T> &&
             const DeepCollectionEquality().equals(other._data, _data));
   }
 
@@ -436,9 +442,9 @@ class _$FullLoadedGenericEvent<T> implements FullLoadedGenericEvent<T> {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$FullLoadedGenericEventCopyWith<T, _$FullLoadedGenericEvent<T>>
-      get copyWith => __$$FullLoadedGenericEventCopyWithImpl<T,
-          _$FullLoadedGenericEvent<T>>(this, _$identity);
+  _$$FullLoadedGenericEventImplCopyWith<T, _$FullLoadedGenericEventImpl<T>>
+      get copyWith => __$$FullLoadedGenericEventImplCopyWithImpl<T,
+          _$FullLoadedGenericEventImpl<T>>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -523,34 +529,34 @@ class _$FullLoadedGenericEvent<T> implements FullLoadedGenericEvent<T> {
 
 abstract class FullLoadedGenericEvent<T> implements GenericEvent<T> {
   const factory FullLoadedGenericEvent({required final List<T> data}) =
-      _$FullLoadedGenericEvent<T>;
+      _$FullLoadedGenericEventImpl<T>;
 
   List<T> get data;
   @JsonKey(ignore: true)
-  _$$FullLoadedGenericEventCopyWith<T, _$FullLoadedGenericEvent<T>>
+  _$$FullLoadedGenericEventImplCopyWith<T, _$FullLoadedGenericEventImpl<T>>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$RefreshGenericEventCopyWith<T, $Res> {
-  factory _$$RefreshGenericEventCopyWith(_$RefreshGenericEvent<T> value,
-          $Res Function(_$RefreshGenericEvent<T>) then) =
-      __$$RefreshGenericEventCopyWithImpl<T, $Res>;
+abstract class _$$RefreshGenericEventImplCopyWith<T, $Res> {
+  factory _$$RefreshGenericEventImplCopyWith(_$RefreshGenericEventImpl<T> value,
+          $Res Function(_$RefreshGenericEventImpl<T>) then) =
+      __$$RefreshGenericEventImplCopyWithImpl<T, $Res>;
 }
 
 /// @nodoc
-class __$$RefreshGenericEventCopyWithImpl<T, $Res>
-    extends _$GenericEventCopyWithImpl<T, $Res, _$RefreshGenericEvent<T>>
-    implements _$$RefreshGenericEventCopyWith<T, $Res> {
-  __$$RefreshGenericEventCopyWithImpl(_$RefreshGenericEvent<T> _value,
-      $Res Function(_$RefreshGenericEvent<T>) _then)
+class __$$RefreshGenericEventImplCopyWithImpl<T, $Res>
+    extends _$GenericEventCopyWithImpl<T, $Res, _$RefreshGenericEventImpl<T>>
+    implements _$$RefreshGenericEventImplCopyWith<T, $Res> {
+  __$$RefreshGenericEventImplCopyWithImpl(_$RefreshGenericEventImpl<T> _value,
+      $Res Function(_$RefreshGenericEventImpl<T>) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$RefreshGenericEvent<T> implements RefreshGenericEvent<T> {
-  const _$RefreshGenericEvent();
+class _$RefreshGenericEventImpl<T> implements RefreshGenericEvent<T> {
+  const _$RefreshGenericEventImpl();
 
   @override
   String toString() {
@@ -558,9 +564,10 @@ class _$RefreshGenericEvent<T> implements RefreshGenericEvent<T> {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$RefreshGenericEvent<T>);
+        (other.runtimeType == runtimeType &&
+            other is _$RefreshGenericEventImpl<T>);
   }
 
   @override
@@ -648,24 +655,26 @@ class _$RefreshGenericEvent<T> implements RefreshGenericEvent<T> {
 }
 
 abstract class RefreshGenericEvent<T> implements GenericEvent<T> {
-  const factory RefreshGenericEvent() = _$RefreshGenericEvent<T>;
+  const factory RefreshGenericEvent() = _$RefreshGenericEventImpl<T>;
 }
 
 /// @nodoc
-abstract class _$$ShowErrorGenericEventCopyWith<T, $Res> {
-  factory _$$ShowErrorGenericEventCopyWith(_$ShowErrorGenericEvent<T> value,
-          $Res Function(_$ShowErrorGenericEvent<T>) then) =
-      __$$ShowErrorGenericEventCopyWithImpl<T, $Res>;
+abstract class _$$ShowErrorGenericEventImplCopyWith<T, $Res> {
+  factory _$$ShowErrorGenericEventImplCopyWith(
+          _$ShowErrorGenericEventImpl<T> value,
+          $Res Function(_$ShowErrorGenericEventImpl<T>) then) =
+      __$$ShowErrorGenericEventImplCopyWithImpl<T, $Res>;
   @useResult
   $Res call({String exception});
 }
 
 /// @nodoc
-class __$$ShowErrorGenericEventCopyWithImpl<T, $Res>
-    extends _$GenericEventCopyWithImpl<T, $Res, _$ShowErrorGenericEvent<T>>
-    implements _$$ShowErrorGenericEventCopyWith<T, $Res> {
-  __$$ShowErrorGenericEventCopyWithImpl(_$ShowErrorGenericEvent<T> _value,
-      $Res Function(_$ShowErrorGenericEvent<T>) _then)
+class __$$ShowErrorGenericEventImplCopyWithImpl<T, $Res>
+    extends _$GenericEventCopyWithImpl<T, $Res, _$ShowErrorGenericEventImpl<T>>
+    implements _$$ShowErrorGenericEventImplCopyWith<T, $Res> {
+  __$$ShowErrorGenericEventImplCopyWithImpl(
+      _$ShowErrorGenericEventImpl<T> _value,
+      $Res Function(_$ShowErrorGenericEventImpl<T>) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -673,7 +682,7 @@ class __$$ShowErrorGenericEventCopyWithImpl<T, $Res>
   $Res call({
     Object? exception = null,
   }) {
-    return _then(_$ShowErrorGenericEvent<T>(
+    return _then(_$ShowErrorGenericEventImpl<T>(
       exception: null == exception
           ? _value.exception
           : exception // ignore: cast_nullable_to_non_nullable
@@ -684,8 +693,8 @@ class __$$ShowErrorGenericEventCopyWithImpl<T, $Res>
 
 /// @nodoc
 
-class _$ShowErrorGenericEvent<T> implements ShowErrorGenericEvent<T> {
-  const _$ShowErrorGenericEvent({required this.exception});
+class _$ShowErrorGenericEventImpl<T> implements ShowErrorGenericEvent<T> {
+  const _$ShowErrorGenericEventImpl({required this.exception});
 
   @override
   final String exception;
@@ -696,10 +705,10 @@ class _$ShowErrorGenericEvent<T> implements ShowErrorGenericEvent<T> {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$ShowErrorGenericEvent<T> &&
+            other is _$ShowErrorGenericEventImpl<T> &&
             (identical(other.exception, exception) ||
                 other.exception == exception));
   }
@@ -710,10 +719,9 @@ class _$ShowErrorGenericEvent<T> implements ShowErrorGenericEvent<T> {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$ShowErrorGenericEventCopyWith<T, _$ShowErrorGenericEvent<T>>
-      get copyWith =>
-          __$$ShowErrorGenericEventCopyWithImpl<T, _$ShowErrorGenericEvent<T>>(
-              this, _$identity);
+  _$$ShowErrorGenericEventImplCopyWith<T, _$ShowErrorGenericEventImpl<T>>
+      get copyWith => __$$ShowErrorGenericEventImplCopyWithImpl<T,
+          _$ShowErrorGenericEventImpl<T>>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -798,11 +806,11 @@ class _$ShowErrorGenericEvent<T> implements ShowErrorGenericEvent<T> {
 
 abstract class ShowErrorGenericEvent<T> implements GenericEvent<T> {
   const factory ShowErrorGenericEvent({required final String exception}) =
-      _$ShowErrorGenericEvent<T>;
+      _$ShowErrorGenericEventImpl<T>;
 
   String get exception;
   @JsonKey(ignore: true)
-  _$$ShowErrorGenericEventCopyWith<T, _$ShowErrorGenericEvent<T>>
+  _$$ShowErrorGenericEventImplCopyWith<T, _$ShowErrorGenericEventImpl<T>>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -899,22 +907,22 @@ class _$GenericStateCopyWithImpl<T, $Res, $Val extends GenericState<T>>
 }
 
 /// @nodoc
-abstract class _$$_LoadingStateCopyWith<T, $Res>
+abstract class _$$LoadingStateImplCopyWith<T, $Res>
     implements $GenericStateCopyWith<T, $Res> {
-  factory _$$_LoadingStateCopyWith(
-          _$_LoadingState<T> value, $Res Function(_$_LoadingState<T>) then) =
-      __$$_LoadingStateCopyWithImpl<T, $Res>;
+  factory _$$LoadingStateImplCopyWith(_$LoadingStateImpl<T> value,
+          $Res Function(_$LoadingStateImpl<T>) then) =
+      __$$LoadingStateImplCopyWithImpl<T, $Res>;
   @override
   @useResult
   $Res call({bool isRefresh});
 }
 
 /// @nodoc
-class __$$_LoadingStateCopyWithImpl<T, $Res>
-    extends _$GenericStateCopyWithImpl<T, $Res, _$_LoadingState<T>>
-    implements _$$_LoadingStateCopyWith<T, $Res> {
-  __$$_LoadingStateCopyWithImpl(
-      _$_LoadingState<T> _value, $Res Function(_$_LoadingState<T>) _then)
+class __$$LoadingStateImplCopyWithImpl<T, $Res>
+    extends _$GenericStateCopyWithImpl<T, $Res, _$LoadingStateImpl<T>>
+    implements _$$LoadingStateImplCopyWith<T, $Res> {
+  __$$LoadingStateImplCopyWithImpl(
+      _$LoadingStateImpl<T> _value, $Res Function(_$LoadingStateImpl<T>) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -922,7 +930,7 @@ class __$$_LoadingStateCopyWithImpl<T, $Res>
   $Res call({
     Object? isRefresh = null,
   }) {
-    return _then(_$_LoadingState<T>(
+    return _then(_$LoadingStateImpl<T>(
       isRefresh: null == isRefresh
           ? _value.isRefresh
           : isRefresh // ignore: cast_nullable_to_non_nullable
@@ -933,8 +941,8 @@ class __$$_LoadingStateCopyWithImpl<T, $Res>
 
 /// @nodoc
 
-class _$_LoadingState<T> implements _LoadingState<T> {
-  const _$_LoadingState({this.isRefresh = false});
+class _$LoadingStateImpl<T> implements _LoadingState<T> {
+  const _$LoadingStateImpl({this.isRefresh = false});
 
   @override
   @JsonKey()
@@ -946,10 +954,10 @@ class _$_LoadingState<T> implements _LoadingState<T> {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_LoadingState<T> &&
+            other is _$LoadingStateImpl<T> &&
             (identical(other.isRefresh, isRefresh) ||
                 other.isRefresh == isRefresh));
   }
@@ -960,8 +968,9 @@ class _$_LoadingState<T> implements _LoadingState<T> {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_LoadingStateCopyWith<T, _$_LoadingState<T>> get copyWith =>
-      __$$_LoadingStateCopyWithImpl<T, _$_LoadingState<T>>(this, _$identity);
+  _$$LoadingStateImplCopyWith<T, _$LoadingStateImpl<T>> get copyWith =>
+      __$$LoadingStateImplCopyWithImpl<T, _$LoadingStateImpl<T>>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1039,33 +1048,33 @@ class _$_LoadingState<T> implements _LoadingState<T> {
 }
 
 abstract class _LoadingState<T> implements GenericState<T> {
-  const factory _LoadingState({final bool isRefresh}) = _$_LoadingState<T>;
+  const factory _LoadingState({final bool isRefresh}) = _$LoadingStateImpl<T>;
 
   @override
   bool get isRefresh;
   @override
   @JsonKey(ignore: true)
-  _$$_LoadingStateCopyWith<T, _$_LoadingState<T>> get copyWith =>
+  _$$LoadingStateImplCopyWith<T, _$LoadingStateImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_LoadedStateCopyWith<T, $Res>
+abstract class _$$LoadedStateImplCopyWith<T, $Res>
     implements $GenericStateCopyWith<T, $Res> {
-  factory _$$_LoadedStateCopyWith(
-          _$_LoadedState<T> value, $Res Function(_$_LoadedState<T>) then) =
-      __$$_LoadedStateCopyWithImpl<T, $Res>;
+  factory _$$LoadedStateImplCopyWith(_$LoadedStateImpl<T> value,
+          $Res Function(_$LoadedStateImpl<T>) then) =
+      __$$LoadedStateImplCopyWithImpl<T, $Res>;
   @override
   @useResult
   $Res call({bool isRefresh, List<T> data});
 }
 
 /// @nodoc
-class __$$_LoadedStateCopyWithImpl<T, $Res>
-    extends _$GenericStateCopyWithImpl<T, $Res, _$_LoadedState<T>>
-    implements _$$_LoadedStateCopyWith<T, $Res> {
-  __$$_LoadedStateCopyWithImpl(
-      _$_LoadedState<T> _value, $Res Function(_$_LoadedState<T>) _then)
+class __$$LoadedStateImplCopyWithImpl<T, $Res>
+    extends _$GenericStateCopyWithImpl<T, $Res, _$LoadedStateImpl<T>>
+    implements _$$LoadedStateImplCopyWith<T, $Res> {
+  __$$LoadedStateImplCopyWithImpl(
+      _$LoadedStateImpl<T> _value, $Res Function(_$LoadedStateImpl<T>) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -1074,7 +1083,7 @@ class __$$_LoadedStateCopyWithImpl<T, $Res>
     Object? isRefresh = null,
     Object? data = null,
   }) {
-    return _then(_$_LoadedState<T>(
+    return _then(_$LoadedStateImpl<T>(
       isRefresh: null == isRefresh
           ? _value.isRefresh
           : isRefresh // ignore: cast_nullable_to_non_nullable
@@ -1089,8 +1098,8 @@ class __$$_LoadedStateCopyWithImpl<T, $Res>
 
 /// @nodoc
 
-class _$_LoadedState<T> implements _LoadedState<T> {
-  const _$_LoadedState({this.isRefresh = false, required final List<T> data})
+class _$LoadedStateImpl<T> implements _LoadedState<T> {
+  const _$LoadedStateImpl({this.isRefresh = false, required final List<T> data})
       : _data = data;
 
   @override
@@ -1110,10 +1119,10 @@ class _$_LoadedState<T> implements _LoadedState<T> {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_LoadedState<T> &&
+            other is _$LoadedStateImpl<T> &&
             (identical(other.isRefresh, isRefresh) ||
                 other.isRefresh == isRefresh) &&
             const DeepCollectionEquality().equals(other._data, _data));
@@ -1126,8 +1135,9 @@ class _$_LoadedState<T> implements _LoadedState<T> {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_LoadedStateCopyWith<T, _$_LoadedState<T>> get copyWith =>
-      __$$_LoadedStateCopyWithImpl<T, _$_LoadedState<T>>(this, _$identity);
+  _$$LoadedStateImplCopyWith<T, _$LoadedStateImpl<T>> get copyWith =>
+      __$$LoadedStateImplCopyWithImpl<T, _$LoadedStateImpl<T>>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1206,34 +1216,35 @@ class _$_LoadedState<T> implements _LoadedState<T> {
 
 abstract class _LoadedState<T> implements GenericState<T> {
   const factory _LoadedState(
-      {final bool isRefresh, required final List<T> data}) = _$_LoadedState<T>;
+      {final bool isRefresh,
+      required final List<T> data}) = _$LoadedStateImpl<T>;
 
   @override
   bool get isRefresh;
   List<T> get data;
   @override
   @JsonKey(ignore: true)
-  _$$_LoadedStateCopyWith<T, _$_LoadedState<T>> get copyWith =>
+  _$$LoadedStateImplCopyWith<T, _$LoadedStateImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_FullLoadedStateCopyWith<T, $Res>
+abstract class _$$FullLoadedStateImplCopyWith<T, $Res>
     implements $GenericStateCopyWith<T, $Res> {
-  factory _$$_FullLoadedStateCopyWith(_$_FullLoadedState<T> value,
-          $Res Function(_$_FullLoadedState<T>) then) =
-      __$$_FullLoadedStateCopyWithImpl<T, $Res>;
+  factory _$$FullLoadedStateImplCopyWith(_$FullLoadedStateImpl<T> value,
+          $Res Function(_$FullLoadedStateImpl<T>) then) =
+      __$$FullLoadedStateImplCopyWithImpl<T, $Res>;
   @override
   @useResult
   $Res call({bool isRefresh, List<T> data});
 }
 
 /// @nodoc
-class __$$_FullLoadedStateCopyWithImpl<T, $Res>
-    extends _$GenericStateCopyWithImpl<T, $Res, _$_FullLoadedState<T>>
-    implements _$$_FullLoadedStateCopyWith<T, $Res> {
-  __$$_FullLoadedStateCopyWithImpl(
-      _$_FullLoadedState<T> _value, $Res Function(_$_FullLoadedState<T>) _then)
+class __$$FullLoadedStateImplCopyWithImpl<T, $Res>
+    extends _$GenericStateCopyWithImpl<T, $Res, _$FullLoadedStateImpl<T>>
+    implements _$$FullLoadedStateImplCopyWith<T, $Res> {
+  __$$FullLoadedStateImplCopyWithImpl(_$FullLoadedStateImpl<T> _value,
+      $Res Function(_$FullLoadedStateImpl<T>) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -1242,7 +1253,7 @@ class __$$_FullLoadedStateCopyWithImpl<T, $Res>
     Object? isRefresh = null,
     Object? data = null,
   }) {
-    return _then(_$_FullLoadedState<T>(
+    return _then(_$FullLoadedStateImpl<T>(
       isRefresh: null == isRefresh
           ? _value.isRefresh
           : isRefresh // ignore: cast_nullable_to_non_nullable
@@ -1257,8 +1268,8 @@ class __$$_FullLoadedStateCopyWithImpl<T, $Res>
 
 /// @nodoc
 
-class _$_FullLoadedState<T> implements _FullLoadedState<T> {
-  const _$_FullLoadedState(
+class _$FullLoadedStateImpl<T> implements _FullLoadedState<T> {
+  const _$FullLoadedStateImpl(
       {this.isRefresh = false, required final List<T> data})
       : _data = data;
 
@@ -1279,10 +1290,10 @@ class _$_FullLoadedState<T> implements _FullLoadedState<T> {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_FullLoadedState<T> &&
+            other is _$FullLoadedStateImpl<T> &&
             (identical(other.isRefresh, isRefresh) ||
                 other.isRefresh == isRefresh) &&
             const DeepCollectionEquality().equals(other._data, _data));
@@ -1295,8 +1306,8 @@ class _$_FullLoadedState<T> implements _FullLoadedState<T> {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_FullLoadedStateCopyWith<T, _$_FullLoadedState<T>> get copyWith =>
-      __$$_FullLoadedStateCopyWithImpl<T, _$_FullLoadedState<T>>(
+  _$$FullLoadedStateImplCopyWith<T, _$FullLoadedStateImpl<T>> get copyWith =>
+      __$$FullLoadedStateImplCopyWithImpl<T, _$FullLoadedStateImpl<T>>(
           this, _$identity);
 
   @override
@@ -1377,34 +1388,34 @@ class _$_FullLoadedState<T> implements _FullLoadedState<T> {
 abstract class _FullLoadedState<T> implements GenericState<T> {
   const factory _FullLoadedState(
       {final bool isRefresh,
-      required final List<T> data}) = _$_FullLoadedState<T>;
+      required final List<T> data}) = _$FullLoadedStateImpl<T>;
 
   @override
   bool get isRefresh;
   List<T> get data;
   @override
   @JsonKey(ignore: true)
-  _$$_FullLoadedStateCopyWith<T, _$_FullLoadedState<T>> get copyWith =>
+  _$$FullLoadedStateImplCopyWith<T, _$FullLoadedStateImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_ErrorStateCopyWith<T, $Res>
+abstract class _$$ErrorStateImplCopyWith<T, $Res>
     implements $GenericStateCopyWith<T, $Res> {
-  factory _$$_ErrorStateCopyWith(
-          _$_ErrorState<T> value, $Res Function(_$_ErrorState<T>) then) =
-      __$$_ErrorStateCopyWithImpl<T, $Res>;
+  factory _$$ErrorStateImplCopyWith(
+          _$ErrorStateImpl<T> value, $Res Function(_$ErrorStateImpl<T>) then) =
+      __$$ErrorStateImplCopyWithImpl<T, $Res>;
   @override
   @useResult
   $Res call({bool isRefresh, String exception});
 }
 
 /// @nodoc
-class __$$_ErrorStateCopyWithImpl<T, $Res>
-    extends _$GenericStateCopyWithImpl<T, $Res, _$_ErrorState<T>>
-    implements _$$_ErrorStateCopyWith<T, $Res> {
-  __$$_ErrorStateCopyWithImpl(
-      _$_ErrorState<T> _value, $Res Function(_$_ErrorState<T>) _then)
+class __$$ErrorStateImplCopyWithImpl<T, $Res>
+    extends _$GenericStateCopyWithImpl<T, $Res, _$ErrorStateImpl<T>>
+    implements _$$ErrorStateImplCopyWith<T, $Res> {
+  __$$ErrorStateImplCopyWithImpl(
+      _$ErrorStateImpl<T> _value, $Res Function(_$ErrorStateImpl<T>) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -1413,7 +1424,7 @@ class __$$_ErrorStateCopyWithImpl<T, $Res>
     Object? isRefresh = null,
     Object? exception = null,
   }) {
-    return _then(_$_ErrorState<T>(
+    return _then(_$ErrorStateImpl<T>(
       isRefresh: null == isRefresh
           ? _value.isRefresh
           : isRefresh // ignore: cast_nullable_to_non_nullable
@@ -1428,8 +1439,8 @@ class __$$_ErrorStateCopyWithImpl<T, $Res>
 
 /// @nodoc
 
-class _$_ErrorState<T> implements _ErrorState<T> {
-  const _$_ErrorState({this.isRefresh = false, required this.exception});
+class _$ErrorStateImpl<T> implements _ErrorState<T> {
+  const _$ErrorStateImpl({this.isRefresh = false, required this.exception});
 
   @override
   @JsonKey()
@@ -1443,10 +1454,10 @@ class _$_ErrorState<T> implements _ErrorState<T> {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ErrorState<T> &&
+            other is _$ErrorStateImpl<T> &&
             (identical(other.isRefresh, isRefresh) ||
                 other.isRefresh == isRefresh) &&
             (identical(other.exception, exception) ||
@@ -1459,8 +1470,8 @@ class _$_ErrorState<T> implements _ErrorState<T> {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ErrorStateCopyWith<T, _$_ErrorState<T>> get copyWith =>
-      __$$_ErrorStateCopyWithImpl<T, _$_ErrorState<T>>(this, _$identity);
+  _$$ErrorStateImplCopyWith<T, _$ErrorStateImpl<T>> get copyWith =>
+      __$$ErrorStateImplCopyWithImpl<T, _$ErrorStateImpl<T>>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1540,13 +1551,13 @@ class _$_ErrorState<T> implements _ErrorState<T> {
 abstract class _ErrorState<T> implements GenericState<T> {
   const factory _ErrorState(
       {final bool isRefresh,
-      required final String exception}) = _$_ErrorState<T>;
+      required final String exception}) = _$ErrorStateImpl<T>;
 
   @override
   bool get isRefresh;
   String get exception;
   @override
   @JsonKey(ignore: true)
-  _$$_ErrorStateCopyWith<T, _$_ErrorState<T>> get copyWith =>
+  _$$ErrorStateImplCopyWith<T, _$ErrorStateImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
